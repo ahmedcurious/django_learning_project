@@ -1,14 +1,17 @@
-{% load static %}
+{% load static %} {% load static tailwind_tags %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>App Basics</title>
+    {% tailwind_css %}
   </head>
-  <body>
-    <h1>App Basics Regarding Django Apps</h1>
-    <p>
+  <body class="bg-blue-950 text-white text-center">
+    <h1 class="bg-orange-500 text-3xl p-5 mb-5">
+      App Basics Regarding Django Apps
+    </h1>
+    <p class="font-extralight">
       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et similique
       harum eligendi iusto maiores aliquam numquam, quas dicta nulla quidem
       quibusdam dolorem laudantium, fuga fugiat error officiis cumque libero
