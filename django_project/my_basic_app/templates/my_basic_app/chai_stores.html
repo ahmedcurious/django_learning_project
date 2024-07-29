@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}Chai Store Form{% endblock %}
+
+{% block content %}
+test content for forms
+<form class="text-blue-400" method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button class='inline-flex items-center justify-center
+    px-4 py-2 border border-transparent text-sm font-medium
+    rounded-md text-white bg-orange-400 hover:bg-orange-600
+    focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-800'
+    type='submit'>Search Store</button>
+</form>
+{% if stores %}
+    <h2>Stores Available</h2>
+    {% for store  in stores %}
+        <ul>
+            <li>{{store.name}} - {{store.location}}</li>
+        </ul>
+    {% endfor %}
+{% endif %}
+{% endblock %}
